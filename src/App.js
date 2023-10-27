@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import UserApis from './apis/UserApis';
 
 function App() {
+  
+  useEffect(() => {
+    UserApis.getUsers();
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
